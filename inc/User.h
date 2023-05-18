@@ -5,13 +5,14 @@ using std::string;
 
 class User
 {
+public:
 	//attritude (data)
 	string first_name;
 	string last_name;
-    int ID_num;
+    int ID;
 
 
-public:
+
 	//constructor (initial value)
 	User();
 	User(string in_first_name, string in_last_name);
