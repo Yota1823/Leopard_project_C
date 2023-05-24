@@ -1,0 +1,50 @@
+Water Fall: (show beginning to end tasks)
+
+Requirement definition: Gather information from the customer (in this case the assignment pdf)
+↓When Completed 
+System and software design: Design the process; create unique names, create processes and databases you are familiar with and can easily maneuver when information is implemented. 
+↓When Completed 
+Implementation + unit testing: Here we will be putting in information to test the system that we have designed in the last step. Here testing in small sections to make sure that each section is functional.
+↓When Completed 
+System Testing: Test by running the entire code rather than sections like the last step.
+↓When Completed  
+Operation and maintenance: Here we would let the user or customer test the code. From here if the customer finds bugs or has things we would like to fix we would need to change it. 
+When Completed (return to Requirement definition)
+
+Incrementation: (what you feel is a starting point of the first iteration, then show what would get added with each phase of incrementation)
+
+1st version: system would be able to list  the names of all first and last names we have entered into the database. (create tables)
+Implement and test
+2nd version: add in all Id numbers of all students and staff
+Implement and test
+3nd version: add in all all emails for all users 
+Implement and test
+4th  version: add in schedules for teachers and students
+Implement and test
+5th version: add in major for students
+Implement and test
+6th version: add in office number and phone number for teachers
+Implement and test
+
+
+
+Integrate and configure: (look online for pieces that you could use (databases, user interfaces, etc.) and describe how you would use/integrate/configure them)
+
+
+
+				
+
+https://www.codeguru.com/database/database-programming-with-c-c/ 
+
+Here we can use this process emphasizing on the first three steps. As we did in class this shows the restraints of what information is mandatory as well as sectioning them into characters, interagers, etc. Here we will do this same process on SQL lite, configuring this code to better fit our requirements from the assignment. We will also implement the query section following the same idea. These first three steps will also be the first three steps in our code development. 
+
+
+
+https://www.geeksforgeeks.org/database-connectivity-using-cc/ 
+
+We will then use this process of inserting values. We will use this basic idea of adding in and id and name into the table we create. Additionally we will have the major in the student portion. Overall we will use this basic idea to implement the information, and create a database configuring it slightly. 
+
+
+https://www.codeguru.com/database/database-programming-with-c-c/ 
+
+	Here we get a basic idea how we could want it to display the information that we inserted. Using this basic separation of ID, first and last name,  major etc. is something I would like to do as well. Of course this is preference but I feel it will be important not only in this leopard web assignment but especially in the design code for this course. I would like to lastly configure the code with this type of organization to be best for the user and overall use of the project we are creating. 
