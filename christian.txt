@@ -1,1 +1,38 @@
-Ryuta has a bum
+Waterfall (Move on once a task is completed): The following phase should not start till the last has finished.
+			Requirement definition:
+-	study, conduct interviews, produce documents.
+			System and software design:
+-	component design, architectural, interface, data base design
+			Implementation/Unit testing:
+-	Programming, create database, test components individually; automated.
+			System testing:
+-	Integrate and test again (put everything together)
+			Operation and maintenance: 
+-	Let someone use the system and debug when needed. 
+
+Incremental Model (implement and test after each version):
+	First version: 
+-	The system should list all the students, instructors, and admin.
+	Next version:
+-	Add in Major for students, ID, date of birth.  
+	Next version:
+-	Add in courses. 
+	Next version:
+-	Add in schedules.
+ 
+Integration and configuration: This process is based on reuse. He uses existing components as much as possible. 
+
+The program shown is a great resource for creating a database and what needs to be done to implement and run it though. These lines of code will be very helpful throughout our process of creating a database and pulling information from it. When using this process, we insert values such as id and name just like the example and we will add in a major. 
+
+Link: https://videlais.com/2018/12/14/c-with-sqlite3-part-5-encapsulating-database-objects/ 
+
+
+
+
+
+
+
+This program is also a great resource because it allows me to search for a column when needed in my database. This could be used as a great tool for testing and making sure things are in the correct spot throughout our database. Being able to check the database for one thing at a time could be very helpful during our testing process. For example, checking a student’s major or date of birth. It will make things much simpler. 
+
+
+Link: https://stackoverflow.com/questions/34336125/in-c-how-do-i-store-an-sql-query-and-sort-it 
