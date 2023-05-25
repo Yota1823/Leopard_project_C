@@ -1,14 +1,15 @@
 Waterfall (Move on once a task is completed): The following phase should not start till the last has finished.
 			Requirement definition:
--	study, conduct interviews, produce documents.
+-	study, conduct interviews, produce documents. (receive information from user)
 			System and software design:
--	component design, architectural, interface, data base design
+-	component design, architectural, interface, data base design (Create people, processes, and databases to easily implement information)
 			Implementation/Unit testing:
--	Programming, create database, test components individually; automated.
+-	Programming, creating database, test components individually; automated. (Testing the system by implementing information)
 			System testing:
--	Integrate and test again (put everything together)
+-	Integrate and test again. (put everything together)
 			Operation and maintenance: 
--	Let someone use the system and debug when needed. 
+-	Let someone use the system and find the debugs throughout. This will allow debugging when needed. 
+
 
 Incremental Model (implement and test after each version):
 	First version: 
