@@ -23,45 +23,48 @@ Waterfall Process Model:
    - have others test, recieve feedback, and make necessary changes/updates
    - add any small features to enhance the program, anything we would like that could be little or big, within the scope of the time remaining
 
+Incremental Development Model:
 
+Version One: approx. 2 weeks
+- create user management system:
+  - users able register, log in, other profile management
+  - implement role-based access control
 
-Incremental Development Process Model:
-Phase 1 (Starting Point): approx. 2 weeks
-- Develop the user management system:
-  - Allow users to register, log in, and manage their profiles.
-  - Implement role-based access control.
-Phase 2 (First Iteration): approx. 3 weeks
+Version Two (1st iteration): approx. 3 weeks
 - Add course management functionality:
-  - Enable students to search for available courses.
-  - Allow instructors to view their course roster.
-  - Implement basic scheduling preferences.
-Phase 3 (Second Iteration): approx. 4 weeks
-- Enhance course management:
-  - Enable students to register for courses and manage their course schedule.
-  - Allow instructors to search for courses and view their own schedules.
-  - Implement advanced scheduling preferences.
-Phase 4 (Third Iteration): approx. 2 weeks
-- Admin functionality and system refinement:
-  - Provide the admin with the ability to add/remove courses and users.
-  - Enable the admin to add/remove students from courses and manage course rosters.
-  - Refine the user interface and improve overall system performance.
+  - students can search available courses
+  - instructors can view their course roster
+  // ? what other scheduling things can we do? like do we have to do the algorithm to have students give all the courses they need and then from there make a schedule with it
+
+Version Three (2nd iteration): approx. 4 weeks
+- course management:
+  - students can register for courses and manage their schedule
+  - instructors can search for courses and view their own schedule
+  - scheduling preferences ??
+
+Version Four (3rd iteration): approx. 2 weeks
+- admin functions:
+  - ability to add/remove courses and users.
+  - add/remove students from courses and manage course rosters
+----------------------------------------------------------------------------------------
+
 Integrate and Configure Process Model:
-1. Database Management System (DBMS):
-   - Integrate a DBMS like MySQL or PostgreSQL to store and manage the database of users and courses.
-   - Configure the database schema and tables according to the system's requirements.
-2. User Interface Framework:
-   - Utilize a web development framework like Django, Ruby on Rails, or ASP.NET to build the user interface.
-   - Configure the framework and design the user interface templates for different user roles.
 
-3. Authentication and Authorization:
-   - Implement a library or module for user authentication and authorization, such as OAuth or JWT.
-   - Configure the authentication system to secure user access and enforce role-based permissions.
-4. Search and Filtering:
-   - Incorporate a search engine or library (e.g., Elasticsearch, Apache Solr) to enable efficient course searching and filtering.
-   - Configure the search engine and define relevant search indices.
-5. Print-out and Scheduling Preferences:
-   - Utilize a reporting or document generation library (e.g., JasperReports, PDFKit) to generate printable schedules for students and instructors.
-   - Configure the library and design the schedule templates.
+1. Database Management:
+   - integrate using SQLite
+   - configure the databases according to the system's requirements.
 
-Timeline (Example):
-Integrating and configuring the above components can take several weeks, depending on the complexity of the system and the familiarity with the chosen technologies. A rough estimate could be around 6-8 weeks, considering the time required for setup, configuration, and testing of each component.
+https://visualstudiomagazine.com/articles/2014/02/01/using-sqlite-with-modern-c.aspx
+
+2. User Interface:
+   - make sure the terminal fits nicely and is easy to use at first glance.
+   - design the user interface for each kind of user
+
+3. Authentication:
+   - database for passwords and user access to enfore security and specific permissions
+
+4. Search Abilities:
+   - search engine with the database library to search relevent courses
+
+5. Print Schedule:
+   - figure out the way we want to be able to print schedules and how to do so
