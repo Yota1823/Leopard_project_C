@@ -1,0 +1,67 @@
+Waterfall Process Model:
+
+1. Requirements: approx. 1 week
+   - list out requirements for the scheduling system, including user types, database structure, and functionality.
+   - understand needs and expectations for each user, what are features that help the flow of the interface
+
+2. System Design: approx. 2 weeks
+   - design the overall system architecture, draw mock ups of the database and user interface
+   - define the structure and relationships between the database tables and our design
+
+3. Implementation: approx. 4 weeks
+   - develop core functions of the scheduling system based on design specs
+   - implement the user management system [controls registration, authentication logging in etc. + more role-based access control]
+   - build the course management module [allow users to add, search, and modify courses]
+
+4. Testing: approx. 2 weeks
+   - test each unit to ensure individual components work correctly and smooth
+   - test the integration between each database/module to verify that different modules interact cohesively
+   - do whole system testing to validate the overall functionality and user experience
+
+
+6. Maintenance and Tweaks: remaining time
+   - have others test, recieve feedback, and make necessary changes/updates
+   - add any small features to enhance the program, anything we would like that could be little or big, within the scope of the time remaining
+
+
+
+Incremental Development Process Model:
+Phase 1 (Starting Point): approx. 2 weeks
+- Develop the user management system:
+  - Allow users to register, log in, and manage their profiles.
+  - Implement role-based access control.
+Phase 2 (First Iteration): approx. 3 weeks
+- Add course management functionality:
+  - Enable students to search for available courses.
+  - Allow instructors to view their course roster.
+  - Implement basic scheduling preferences.
+Phase 3 (Second Iteration): approx. 4 weeks
+- Enhance course management:
+  - Enable students to register for courses and manage their course schedule.
+  - Allow instructors to search for courses and view their own schedules.
+  - Implement advanced scheduling preferences.
+Phase 4 (Third Iteration): approx. 2 weeks
+- Admin functionality and system refinement:
+  - Provide the admin with the ability to add/remove courses and users.
+  - Enable the admin to add/remove students from courses and manage course rosters.
+  - Refine the user interface and improve overall system performance.
+Integrate and Configure Process Model:
+1. Database Management System (DBMS):
+   - Integrate a DBMS like MySQL or PostgreSQL to store and manage the database of users and courses.
+   - Configure the database schema and tables according to the system's requirements.
+2. User Interface Framework:
+   - Utilize a web development framework like Django, Ruby on Rails, or ASP.NET to build the user interface.
+   - Configure the framework and design the user interface templates for different user roles.
+
+3. Authentication and Authorization:
+   - Implement a library or module for user authentication and authorization, such as OAuth or JWT.
+   - Configure the authentication system to secure user access and enforce role-based permissions.
+4. Search and Filtering:
+   - Incorporate a search engine or library (e.g., Elasticsearch, Apache Solr) to enable efficient course searching and filtering.
+   - Configure the search engine and define relevant search indices.
+5. Print-out and Scheduling Preferences:
+   - Utilize a reporting or document generation library (e.g., JasperReports, PDFKit) to generate printable schedules for students and instructors.
+   - Configure the library and design the schedule templates.
+
+Timeline (Example):
+Integrating and configuring the above components can take several weeks, depending on the complexity of the system and the familiarity with the chosen technologies. A rough estimate could be around 6-8 weeks, considering the time required for setup, configuration, and testing of each component.
