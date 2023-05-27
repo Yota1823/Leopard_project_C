@@ -22,6 +22,7 @@ Waterfall Process Model:
 6. Maintenance and Tweaks: remaining time
    - have others test, recieve feedback, and make necessary changes/updates
    - add any small features to enhance the program, anything we would like that could be little or big, within the scope of the time remaining
+----------------------------------------------------------------------------------------------
 
 Incremental Development Model:
 
@@ -46,7 +47,7 @@ Version Four (3rd iteration): approx. 2 weeks
 - admin functions:
   - ability to add/remove courses and users.
   - add/remove students from courses and manage course rosters
-----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 Integrate and Configure Process Model:
 
