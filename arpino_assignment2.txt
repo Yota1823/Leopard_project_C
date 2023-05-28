@@ -1,27 +1,27 @@
 Waterfall Process Model:
 
 1. Requirements: approx. 1 week 
-   - list out requirements for the scheduling system, including user types, database structure, and functionality.
-   - understand needs and expectations for each user, what are features that help the flow of the interface
+   - List out requirements for the scheduling system, including user types, database structure, and functionality.
+   - Understand needs and expectations for each user, what are features that help the flow of the interface
 
 2. System Design: approx. 2 weeks
-   - design the overall system architecture, draw mock ups of the database and user interface
-   - define the structure and relationships between the database tables and our design
+   - Design the overall system architecture, draw mock ups of the database and user interface
+   - Define the structure and relationships between the database tables and our design
 
 3. Implementation: approx. 4 weeks
-   - develop core functions of the scheduling system based on design specs
-   - implement the user management system [controls registration, authentication logging in etc. + more role-based access control]
-   - build the course management module [allow users to add, search, and modify courses]
+   - Develop core functions of the scheduling system based on design specs
+   - Implement the user management system [controls registration, authentication logging in etc. + more role-based access control]
+   - Build the course management module [allow users to add, search, and modify courses]
 
 4. Testing: approx. 2 weeks
-   - test each unit to ensure individual components work correctly and smooth
-   - test the integration between each database/module to verify that different modules interact cohesively
-   - do whole system testing to validate the overall functionality and user experience
+   - Test each unit to ensure individual components work correctly and smooth
+   - Test the integration between each database/module to verify that different modules interact cohesively
+   - Do whole system testing to validate the overall functionality and user experience
 
 
 6. Maintenance and Tweaks: remaining time
-   - have others test, recieve feedback, and make necessary changes/updates
-   - add any small features to enhance the program, anything we would like that could be little or big, within the scope of the time remaining
+   - Have others test, recieve feedback, and make necessary changes/updates
+   - Add any small features to enhance the program, anything we would like that could be little or big, within the scope of the time remaining
 ----------------------------------------------------------------------------------------------
 
 Incremental Development Model:// we should definitely do these time frames to stay on track
@@ -29,25 +29,25 @@ Incremental Development Model:// we should definitely do these time frames to st
 // version one focusing more on getting the data base together and figuring out what each class will need will be very important and should propbably take one week so if we could fit that into the time frame i think that would work.
 Version One: approx. 2 weeks
 - create user management system:
-  - users able register, log in, other profile management
-  - implement role-based access control
+  - Users able register, log in, other profile management
+  - Implement role-based access control
 
 Version Two (1st iteration): approx. 3 weeks
 - Add course management functionality:
-  - students can search available courses
-  - instructors can view their course roster
+  - Students can search available courses
+  - Instructors can view their course roster
   // ? what other scheduling things can we do? like do we have to do the algorithm to have students give all the courses they need and then from there make a schedule with it
 
 Version Three (2nd iteration): approx. 4 weeks
-- course management:
-  - students can register for courses and manage their schedule
-  - instructors can search for courses and view their own schedule
-  - scheduling preferences ??
+- Course management:
+  - Students can register for courses and manage their schedule
+  - Instructors can search for courses and view their own schedule
+  - Scheduling preferences ??
 
 Version Four (3rd iteration): approx. 2 weeks
-- admin functions:
-  - ability to add/remove courses and users.
-  - add/remove students from courses and manage course rosters
+- Admin functions:
+  - Ability to add/remove courses and users.
+  - Add/remove students from courses and manage course rosters
   
   // like ending with the admin abilities this should either be first or last. here it might be a good idea to siwch version 2 and 4. but we can discuss more in class.
 ----------------------------------------------------------------------------------------------
@@ -55,20 +55,20 @@ Version Four (3rd iteration): approx. 2 weeks
 Integrate and Configure Process Model:
 
 1. Database Management:
-   - integrate using SQLite
-   - configure the databases according to the system's requirements.
+   - Integrate using SQLite
+   - Configure the databases according to the system's requirements.
 
 https://visualstudiomagazine.com/articles/2014/02/01/using-sqlite-with-modern-c.aspx
 
 2. User Interface:
-   - make sure the terminal fits nicely and is easy to use at first glance.
-   - design the user interface for each kind of user
+   - Make sure the terminal fits nicely and is easy to use at first glance.
+   - Design the user interface for each kind of user
 
 3. Authentication:
-   - database for passwords and user access to enfore security and specific permissions
+   - Database for passwords and user access to enfore security and specific permissions
 
 4. Search Abilities:
-   - search engine with the database library to search relevent courses
+   - Search engine with the database library to search relevent courses
 
 5. Print Schedule:
-   - figure out the way we want to be able to print schedules and how to do so
+   - Figure out the way we want to be able to print schedules and how to do so
