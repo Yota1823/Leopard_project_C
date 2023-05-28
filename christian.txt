@@ -1,10 +1,10 @@
 Waterfall (Move on once a task is completed): The following phase should not start till the last has finished.
 			Requirement definition:
--	study, conduct interviews, produce documents. (receive information from user)
+-	study, conduct , produce documents. (receive information from user)
 			System and software design:
 -	component design, architectural, interface, data base design (Create people, processes, and databases to easily implement information)
 			Implementation/Unit testing:
--	Programming, creating database, test components individually; automated. (Testing the system by implementing information)
+-	Programming, creating database, test components individually( i think we will be using this protion a lot over and over so this is why i think we should use the incremental model); automated. (Testing the system by implementing information)
 			System testing:
 -	Integrate and test again. (put everything together)
 			Operation and maintenance: 
@@ -15,7 +15,9 @@ Incremental Model (implement and test after each version):
 	First version: 
 -	The system should list all the students, instructors, and admin.
 	Next version:
--	Add in Major for students, ID, date of birth.  
+	add in emails and phone numebers // maybe add in the instructors office number ?
+	next version:
+-	Add in Major for students, ID,  
 	Next version:
 -	Add in courses. 
 	Next version:
