@@ -1,15 +1,15 @@
 Waterfall (Move on once a task is completed): The following phase should not start till the last has finished.
 			Requirement definition:
--	study, conduct , produce documents. (receive information from user)
+-	study, conduct, produce documents. (receive information from user)
 			System and software design:
 -	component design, architectural, interface, data base design (Create people, processes, and databases to easily implement information)
 			Implementation/Unit testing:
--	Programming, creating database, test components individually( i think we will be using this protion a lot over and over so this is why i think we should use the incremental model); automated. (Testing the system by implementing information)  // K: i agree incremental seems best  //
+-	Programming, creating database, test components individually(I think we will be using this protion a lot over and over so this is why I think we should use the incremental model); automated. (Testing the system by implementing information)  // K: I agree incremental seems best  //
 			System testing:
 -	Integrate and test again. (put everything together)
 			Operation and maintenance: 
 -	Let someone use the system and find the debugs throughout. This will allow debugging when needed. 
-
+//I like incremental model to achieve our project//
 
 Incremental Model (implement and test after each version):
 	First version: 
@@ -21,7 +21,7 @@ Incremental Model (implement and test after each version):
 	Next version:
 -	admin functions to add/remove courses and users
 	Next version:
--	individuals able to edit their scheudle and view class roster etc.
+-	individuals able to edit their scheudle and view class roster etc. 
  
 Integration and configuration: This process is based on reuse. He uses existing components as much as possible. 
 
