@@ -4,7 +4,7 @@ Waterfall (Move on once a task is completed): The following phase should not sta
 			System and software design:
 -	component design, architectural, interface, data base design (Create people, processes, and databases to easily implement information)
 			Implementation/Unit testing:
--	Programming, creating database, test components individually( i think we will be using this protion a lot over and over so this is why i think we should use the incremental model); automated. (Testing the system by implementing information)
+-	Programming, creating database, test components individually( i think we will be using this protion a lot over and over so this is why i think we should use the incremental model); automated. (Testing the system by implementing information)  // K: i agree incremental seems best  //
 			System testing:
 -	Integrate and test again. (put everything together)
 			Operation and maintenance: 
@@ -13,15 +13,15 @@ Waterfall (Move on once a task is completed): The following phase should not sta
 
 Incremental Model (implement and test after each version):
 	First version: 
--	The system should list all the students, instructors, and admin.
+-	The system should list all the students, instructors, and admin.  // K: email phone numbers, ID and major can go here  //
 	Next version:
-	add in emails and phone numebers // maybe add in the instructors office number ?
+-	students can search for courses, instructors can view their roster
 	next version:
--	Add in Major for students, ID,  
+-	can register for courses
 	Next version:
--	Add in courses. 
+-	admin functions to add/remove courses and users
 	Next version:
--	Add in schedules.
+-	individuals able to edit their scheudle and view class roster etc.
  
 Integration and configuration: This process is based on reuse. He uses existing components as much as possible. 
 
