@@ -1,5 +1,5 @@
 Waterfall Process Model:
-
+## really went in depth here and explained a lot of good thoughts.
 1. Requirements: approx. 1 week 
    - List out requirements for the scheduling system, including user types, database structure, and functionality.
    - Understand needs and expectations for each user, what are features that help the flow of the interface
@@ -23,7 +23,7 @@ Waterfall Process Model:
    - Have others test, recieve feedback, and make necessary changes/updates
    - Add any small features to enhance the program, anything we would like that could be little or big, within the scope of the time remaining
 ----------------------------------------------------------------------------------------------
-
+## good spacing with ideas and enjoyed the timeline given to create good timing. 
 Incremental Development Model:// we should definitely do these time frames to stay on track
 
 // version one focusing more on getting the data base together and figuring out what each class will need will be very important and should propbably take one week so if we could fit that into the time frame i think that would work.
