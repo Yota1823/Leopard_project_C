@@ -1,5 +1,5 @@
 Water Fall: (show beginning to end tasks)
-
+## good waterfall process but some steps could be more connectioned to the overall project and place more in depth
 1st) Requirement definition: Gather information from the customer (in this case the assignment pdf)
 ↓When Completed 
 2nd) System and software design: Design the process; create unique names, create processes and databases you are familiar with and can easily maneuver when information is implemented. 
