@@ -3,15 +3,17 @@ We learned three process models (waterfall, incremental development, and integra
 For waterfall, show the beginning-to-end tasks. For incremental, choose what you feel is a starting point of the first iteration, then show what would get added with each phase of incrementation.  For integrate and configure, look online for pieces that you could use (databases, user interfaces, etc.) and describe how you would use/integrate/configure them.  You should cite anything you find. For each, include a proposed timeline for each stage/iteration. 
 
 Water fall method: the following method should complete the whole process till repeat the process.
-Step 1: requirement definition – feasibility study, conduct interviews, produce documents.
+Step 1: requirement definition – feasibility study, produce documents.
 Step 2: system and software design – design only. Component design, architectural, interface, database design.
 Step 3: Implementation + unit testing – writing code, create database, test components individually automated.
 Step 4: System testing – put all together and integrate and test again.
 Step 5: Operation and maintenance – let the user use the system, then debug when needed.
+//feel like we can build off these ideas overall
 
 Incremental method: 
 First version - the system should list all the students, instructors, and admin. Then implement and test.
-Next version - add in Major for students, ID, date of birth. Then implement and test.
+next version: add in email and phone number 
+Next version - add in Major for students, ID,. Then implement and test.
 Next version - add in courses. Then implement and test.
 Next version - add in schedules. Then implement and test.
 
