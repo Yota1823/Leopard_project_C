@@ -11,12 +11,12 @@ Step 5: Operation and maintenance – let the user use the system, then debug wh
 //feel like we can build off these ideas overall
 
 Incremental method: 
-First version - the system should list all the students, instructors, and admin. Then implement and test.
-next version: add in email and phone number 
-Next version - add in Major for students, ID,. Then implement and test.
-Next version - add in courses. Then implement and test.
-Next version - add in schedules. Then implement and test.
-
+First version - the system should list all the students, instructors, and admin with their email, phone numbers, major, ID, etc. Then implement and test.
+next version - log in system, role-based access control
+Next version - search for available courses, admin course functions?
+Next version - students can add or remove courses, admins can remove or add students
+Next version - add in schedules, ability to view schedules and rosters
+// K: this is probably the best model type to use, since we can have specific goals that are able to be repeated if needed
 
 Integrate and configure: this process is based on reuse and reference from it.
 
