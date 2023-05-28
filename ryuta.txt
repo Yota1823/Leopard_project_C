@@ -1,7 +1,7 @@
 We learned three process models (waterfall, incremental development, and integrate and configure).  Each describes the timeline and process for the development phase, including high-level design and development tasks.  Your job for this assignment is to do a preliminary process model diagram/description using each of the three.   
  
 For waterfall, show the beginning-to-end tasks. For incremental, choose what you feel is a starting point of the first iteration, then show what would get added with each phase of incrementation.  For integrate and configure, look online for pieces that you could use (databases, user interfaces, etc.) and describe how you would use/integrate/configure them.  You should cite anything you find. For each, include a proposed timeline for each stage/iteration. 
-
+## I wih there was more connection to our project and was design towards our steps and not the basic step being taken.
 Water fall method: the following method should complete the whole process till repeat the process.
 Step 1: requirement definition – feasibility study, produce documents.
 Step 2: system and software design – design only. Component design, architectural, interface, database design.
@@ -17,7 +17,7 @@ Next version - search for available courses, admin course functions?
 Next version - students can add or remove courses, admins can remove or add students
 Next version - add in schedules, ability to view schedules and rosters
 // K: this is probably the best model type to use, since we can have specific goals that are able to be repeated if needed
-
+## Did a good job here comparing to our prject but there definitely more we can use this information on. 
 Integrate and configure: this process is based on reuse and reference from it.
 
   
