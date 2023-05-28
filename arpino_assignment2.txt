@@ -1,6 +1,6 @@
 Waterfall Process Model:
 
-1. Requirements: approx. 1 week
+1. Requirements: approx. 1 week 
    - list out requirements for the scheduling system, including user types, database structure, and functionality.
    - understand needs and expectations for each user, what are features that help the flow of the interface
 
@@ -24,8 +24,9 @@ Waterfall Process Model:
    - add any small features to enhance the program, anything we would like that could be little or big, within the scope of the time remaining
 ----------------------------------------------------------------------------------------------
 
-Incremental Development Model:
+Incremental Development Model:// we should definitely do these time frames to stay on track
 
+// version one focusing more on getting the data base together and figuring out what each class will need will be very important and should propbably take one week so if we could fit that into the time frame i think that would work.
 Version One: approx. 2 weeks
 - create user management system:
   - users able register, log in, other profile management
@@ -47,6 +48,8 @@ Version Four (3rd iteration): approx. 2 weeks
 - admin functions:
   - ability to add/remove courses and users.
   - add/remove students from courses and manage course rosters
+  
+  // like ending with the admin abilities this should either be first or last. here it might be a good idea to siwch version 2 and 4. but we can discuss more in class.
 ----------------------------------------------------------------------------------------------
 
 Integrate and Configure Process Model:
