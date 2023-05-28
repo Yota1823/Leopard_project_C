@@ -5,34 +5,34 @@ Requirement definition: Gather information from the customer (in this case the a
 System and software design: Design the process; create unique names, create processes and databases you are familiar with and can easily maneuver when information is implemented. 
 ↓When Completed 
 Implementation + unit testing: Here we will be putting in information to test the system that we have designed in the last step. Here testing in small sections to make sure that each section is functional.
+// K: implement role-based accesses  //
+// K: build course management model  //
 ↓When Completed 
-System Testing: Test by running the entire code rather than sections like the last step.
+System Testing: //K: test integration between code and database  //
+Test by running the entire code rather than sections like the last step.
 ↓When Completed  
 Operation and maintenance: Here we would let the user or customer test the code. From here if the customer finds bugs or has things we would like to fix we would need to change it. 
 When Completed (return to Requirement definition)
 
 Incrementation: (what you feel is a starting point of the first iteration, then show what would get added with each phase of incrementation)
 
-1st version: system would be able to list  the names of all first and last names we have entered into the database. (create tables)
+1st version: system would be able to list the names of all first and last names, ID and major we have entered into the database. (create tables)
 Implement and test
-2nd version: add in all Id numbers of all students and staff
-Implement and test
-3nd version: add in all all emails for all users 
+2nd version: log in system
+3nd version: students can search courses, instructors can view their roster
 Implement and test
 4th  version: add in schedules for teachers and students
 Implement and test
-5th version: add in major for students
+5th version: ability to remove or edit courses for students, edit course rosters for instructors
 Implement and test
 6th version: add in office number and phone number for teachers
 Implement and test
 
 
-
-Integrate and configure: (look online for pieces that you could use (databases, user interfaces, etc.) and describe how you would use/integrate/configure them)
-
+// K: some of the incrementation (i.e. about student or teacher information) could be put under one or two versions probably  //
 
 
-				
+Integrate and configure: (look online for pieces that you could use (databases, user interfaces, etc.) and describe how you would use/integrate/configure them)				
 
 https://www.codeguru.com/database/database-programming-with-c-c/ 
 
