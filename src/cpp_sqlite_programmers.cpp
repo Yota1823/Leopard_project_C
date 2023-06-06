@@ -122,7 +122,7 @@ int main(int argc, char** argv)
 	int credit;
 
 	cout << endl << "Enter the first name, last name, and birth year of a famous programmer separated by spaces: ";
-	cin >> fname >> lname >> year;
+	cin >> fname >> lname >> year >> CRN >> title >> department >> time >> dotw >> semester >> credit;
 	cout << endl;
 
 	// Adding from a file or a user input means some string additions (see below)
