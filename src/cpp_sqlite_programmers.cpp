@@ -42,7 +42,7 @@ int main(int argc, char** argv)
                    "TIME INTEGER NOT NULL, "
 				   "DOTW TEXT NOT NULL," 
 				   "SEMSTER TEXT NOT NULL, " // DID TEXT TO HAVE SUMMER SPRING FAL
-				   "YEAR INTEGER NOT NULL,"
+				   "YEAR TEXT NOT NULL,"
 				   "CREDITS INTEGER NOT NULL);";
     	
 	int exit = 0;
@@ -69,13 +69,13 @@ int main(int argc, char** argv)
 	 Create a string then pass the string into the sqlite3_exec function
 	********************************************************************/
 	// hard-code (push) a few values into the database - NOTE you can create a single string with multiple INSERT commands
-    string sql("INSERT INTO PROGRAMMER VALUES(123, 'PROGRAMMING', 'ELECTRICAL', 1230, 'MONDAY', 'SUMMER', 3 );"
-        "INSERT INTO PROGRAMMER VALUES(132, 'SIGNALS', 'ELECTRICAL', 200, 'TUESDAY', 'SPRING', 4 );"
-        "INSERT INTO PROGRAMMER VALUES(321, 'NETWORKS', 'ELECTRICAL', 100, 'WEDNESDAY', 'FALL', 4);"
-        "INSERT INTO PROGRAMMER VALUES(322, 'MULTIVARIABLE', 'MATH', 330, 'THURSDAY', ' FALL', 4);"
-        "INSERT INTO PROGRAMMER VALUES(113, 'ETHICS', 'HSS', 800, 'FRIDAY', 'SPRING', 3 );"
-        "INSERT INTO PROGRAMMER VALUES(121, 'ECOMONY', 'MATH' , 500, 'MONDAY', 'SUMMER', 3);"
-        "INSTERT INTO PROGRAMMER VALUES(332, 'ENGLISH', 'ENGLISH', 330, 'TUESDAY', 'FALL', 3;)" // SEMI COLON IN PARENTH
+    string sql("INSERT INTO PROGRAMMER VALUES(123, 'PROGRAMMING', 'ELECTRICAL', 1230, 'MONDAY', 'SUMMER', 'JUNIOR', 3 );"
+        "INSERT INTO PROGRAMMER VALUES(132, 'SIGNALS', 'ELECTRICAL', 200, 'TUESDAY', 'SPRING', 'SENIOR', 4 );"
+        "INSERT INTO PROGRAMMER VALUES(321, 'NETWORKS', 'ELECTRICAL', 100, 'WEDNESDAY', 'FALL', 'FRESHMAN', 4);"
+        "INSERT INTO PROGRAMMER VALUES(322, 'MULTIVARIABLE', 'MATH', 330, 'THURSDAY', ' FALL', 'SENIOR', 4);"
+        "INSERT INTO PROGRAMMER VALUES(113, 'ETHICS', 'HSS', 800, 'FRIDAY', 'SPRING', 'FRESHMAN', 3 );"
+        "INSERT INTO PROGRAMMER VALUES(121, 'ECOMONY', 'MATH' , 500, 'MONDAY', 'SUMMER', 'JUNIOR', 3);"
+        "INSTERT INTO PROGRAMMER VALUES(332, 'ENGLISH', 'ENGLISH', 330, 'TUESDAY', 'FALL', 'SOPHMORE', 3;)" // SEMI COLON IN PARENTH
 
     );
 
@@ -110,24 +110,23 @@ int main(int argc, char** argv)
 	 adding from a file or user input
 	 get input --> create string --> call command
 	**********************************************/
-	string fname, lname; 
-	string year;			//year is an integer in the database table, but we beed to create a string to pass in to the sql command
+	string fname, lname; 			//year is an integer in the database table, but we beed to create a string to pass in to the sql command
 	int CRN;
 	string title;
 	string department;
 	int time;
 	int dotw;
 	string semester;
-	int year;
+	string year;
 	int credit;
 
 	cout << endl << "Enter the first name, last name, and birth year of a famous programmer separated by spaces: ";
-	cin >> fname >> lname >> year >> CRN >> title >> department >> time >> dotw >> semester >> credit;
+	cin >> fname >> lname >> CRN >> title >> department >> time >> dotw >> semester >> year >> credit;
 	cout << endl;
 
 	// Adding from a file or a user input means some string additions (see below)
-	string UID = "6";
-	string userInput("INSERT INTO PROGRAMMER VALUES(" + UID + ",'" + fname + "','" + lname + "'," + year + ");");
+	string UID = "8";
+	string userInput("INSERT INTO PROGRAMMER VALUES(" + fname + "','" + lname + "'," + CRN + "'," + title + "'," + department + "'," + time + "'," + dotw + "'," + semester + "'," + year + "'," + credit ");");
 
 	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
 
