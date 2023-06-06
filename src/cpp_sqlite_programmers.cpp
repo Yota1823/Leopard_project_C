@@ -36,10 +36,14 @@ int main(int argc, char** argv)
 	 Create a string then pass the string into the sqlite3_exec function
 	********************************************************************/
     string table = "CREATE TABLE PROGRAMMER("
-                   "ID INTEGER PRIMARY KEY, "
-                   "NAME TEXT NOT NULL, "
-                   "SURNAME TEXT NOT NULL, "
-                   "BIRTHYEAR INTEGER NOT NULL); "; 
+                   "CRN INTEGER PRIMARY KEY, "
+                   "TITLE TEXT NOT NULL, "
+                   "DEPARTMENT TEXT NOT NULL, "
+                   "TIME INTEGER NOT NULL, "
+				   "DOTW TEXT NOT NULL," 
+				   "SEMSTER TEXT NOT NULL, " // DID TEXT TO HAVE SUMMER SPRING FAL
+				   "YEAR INTEGER NOT NULL,"
+				   "CREDITS INTEGER NOT NULL);";
     	
 	int exit = 0;
 		
@@ -70,6 +74,9 @@ int main(int argc, char** argv)
 		"INSERT INTO PROGRAMMER VALUES(3, 'MARY KENNETH', 'KELLER', 1913);"
 		"INSERT INTO PROGRAMMER VALUES(4, 'EVELYN', 'BOYD GRANVILLE', 1924);"
 		"INSERT INTO PROGRAMMER VALUES(5, 'CAROL', 'SHAW', 1955);"
+		"INSERT INTO PROGRAMMER VALUES(6, 'TORY', 'CURRO' , 2001);"
+		"INSTERT INTO PROGRAMMER VALUES(7, 'DANTE', 'SMITH', 2006;)"
+
 	);
 
 	// execute the command
