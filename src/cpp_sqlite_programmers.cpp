@@ -111,6 +111,14 @@ int main(int argc, char** argv)
 	**********************************************/
 	string fname, lname; 
 	string year;			//year is an integer in the database table, but we beed to create a string to pass in to the sql command
+	int CRN;
+	string title;
+	string department;
+	int time;
+	int dotw;
+	string semester;
+	
+
 	cout << endl << "Enter the first name, last name, and birth year of a famous programmer separated by spaces: ";
 	cin >> fname >> lname >> year;
 	cout << endl;
