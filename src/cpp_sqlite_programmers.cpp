@@ -120,7 +120,7 @@ int main(int argc, char** argv)
 	string year;
 	int credit;
 
-	cout << endl << "Enter the first name, last name, and birth year of a famous programmer separated by spaces: ";
+	cout << endl << "Enter the first name, last name, CRN, title, department, time, dotw, semester, year, and credit separated by spaces: ";
 	cin >> fname >> lname >> CRN >> title >> department >> time >> dotw >> semester >> year >> credit;
 	cout << endl;
 
