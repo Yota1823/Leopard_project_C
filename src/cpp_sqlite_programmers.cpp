@@ -1,5 +1,5 @@
 #include <iostream> 
-#include <sqlite3.h>
+#include <sqlite3.h> 
 #include <string> 
 #include <stdio.h>
   
@@ -69,13 +69,13 @@ int main(int argc, char** argv)
 	 Create a string then pass the string into the sqlite3_exec function
 	********************************************************************/
 	// hard-code (push) a few values into the database - NOTE you can create a single string with multiple INSERT commands
-	string sql("INSERT INTO PROGRAMMER VALUES(1, 'ADA', 'LOVELACE', 1815);"
-		"INSERT INTO PROGRAMMER VALUES(2, 'GRACE', 'HOPPER', 1906);"
-		"INSERT INTO PROGRAMMER VALUES(3, 'MARY KENNETH', 'KELLER', 1913);"
-		"INSERT INTO PROGRAMMER VALUES(4, 'EVELYN', 'BOYD GRANVILLE', 1924);"
-		"INSERT INTO PROGRAMMER VALUES(5, 'CAROL', 'SHAW', 1955);"
-		"INSERT INTO PROGRAMMER VALUES(6, 'TORY', 'CURRO' , 2001);"
-		"INSTERT INTO PROGRAMMER VALUES(7, 'DANTE', 'SMITH', 2006;)"
+	string sql("INSERT INTO PROGRAMMER VALUES(123, 'PROGRAMMING', 'ELECTRICAL', 1230, 'MONDAY', 'SUMMER', 3 );"
+		"INSERT INTO PROGRAMMER VALUES(132, 'SIGNALS', 'ELECTRICAL', 200, 'TUESDAY', 'SPRING', 4 );"
+		"INSERT INTO PROGRAMMER VALUES(321, 'NETWORKS', 'ELECTRICAL', 100, 'WEDNESDAY', 'FALL', 4);"
+		"INSERT INTO PROGRAMMER VALUES(322, 'MULTIVARIABLE', 'MATH', 330, 'THURSDAY', ' FALL', 4);"
+		"INSERT INTO PROGRAMMER VALUES(113, 'ETHICS', 'HSS', 800, 'FRIDAY', 'SPRING', 3 );"
+		"INSERT INTO PROGRAMMER VALUES(121, 'ECOMONY', 'MATH' , 500, 'MONDAY', 'SUMMER', 3);"
+		"INSTERT INTO PROGRAMMER VALUES(332, 'ENGLISH', 'ENGLISH', 330, 'TUESDAY', 'FALL', 3;)" // SEMI COLON IN PARENTH
 
 	);
 
