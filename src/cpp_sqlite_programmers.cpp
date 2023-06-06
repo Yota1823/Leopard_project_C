@@ -35,7 +35,7 @@ int main(int argc, char** argv)
 	 Creating a table
 	 Create a string then pass the string into the sqlite3_exec function
 	********************************************************************/
-    string table = "CREATE TABLE PROGRAMMER("
+    string table = "CREATE TABLE COURSES("
                    "CRN INTEGER PRIMARY KEY, "
                    "TITLE TEXT NOT NULL, "
                    "DEPARTMENT TEXT NOT NULL, "
@@ -47,7 +47,7 @@ int main(int argc, char** argv)
     	
 	int exit = 0;
 		
-    exit = sqlite3_open("programmer.db", &DB);			//open the database
+    exit = sqlite3_open("courses.db", &DB);			//open the database
 		
 	char* messageError; 
 	
@@ -69,13 +69,13 @@ int main(int argc, char** argv)
 	 Create a string then pass the string into the sqlite3_exec function
 	********************************************************************/
 	// hard-code (push) a few values into the database - NOTE you can create a single string with multiple INSERT commands
-    string sql("INSERT INTO PROGRAMMER VALUES(123, 'PROGRAMMING', 'ELECTRICAL', 1230, 'MONDAY', 'SUMMER', 'JUNIOR', 3 );"
-        "INSERT INTO PROGRAMMER VALUES(132, 'SIGNALS', 'ELECTRICAL', 200, 'TUESDAY', 'SPRING', 'SENIOR', 4 );"
-        "INSERT INTO PROGRAMMER VALUES(321, 'NETWORKS', 'ELECTRICAL', 100, 'WEDNESDAY', 'FALL', 'FRESHMAN', 4);"
-        "INSERT INTO PROGRAMMER VALUES(322, 'MULTIVARIABLE', 'MATH', 330, 'THURSDAY', ' FALL', 'SENIOR', 4);"
-        "INSERT INTO PROGRAMMER VALUES(113, 'ETHICS', 'HSS', 800, 'FRIDAY', 'SPRING', 'FRESHMAN', 3 );"
-        "INSERT INTO PROGRAMMER VALUES(121, 'ECOMONY', 'MATH' , 500, 'MONDAY', 'SUMMER', 'JUNIOR', 3);"
-        "INSTERT INTO PROGRAMMER VALUES(332, 'ENGLISH', 'ENGLISH', 330, 'TUESDAY', 'FALL', 'SOPHMORE', 3;)" // SEMI COLON IN PARENTH
+    string sql("INSERT INTO COURSES VALUES(123, 'PROGRAMMING', 'ELECTRICAL', 1230, 'MONDAY', 'SUMMER', 'JUNIOR', 3 );"
+        "INSERT INTO COURSES VALUES(132, 'SIGNALS', 'ELECTRICAL', 200, 'TUESDAY', 'SPRING', 'SENIOR', 4 );"
+        "INSERT INTO COURSES VALUES(321, 'NETWORKS', 'ELECTRICAL', 100, 'WEDNESDAY', 'FALL', 'FRESHMAN', 4);"
+        "INSERT INTO COURSES VALUES(322, 'MULTIVARIABLE', 'MATH', 330, 'THURSDAY', ' FALL', 'SENIOR', 4);"
+        "INSERT INTO COURSES VALUES(113, 'ETHICS', 'HSS', 800, 'FRIDAY', 'SPRING', 'FRESHMAN', 3 );"
+        "INSERT INTO COURSES VALUES(121, 'ECOMONY', 'MATH' , 500, 'MONDAY', 'SUMMER', 'JUNIOR', 3);"
+        "INSTERT INTO COURSES VALUES(332, 'ENGLISH', 'ENGLISH', 330, 'TUESDAY', 'FALL', 'SOPHMORE', 3;)" // SEMI COLON IN PARENTH
 
     );
 
@@ -97,7 +97,7 @@ int main(int argc, char** argv)
 	 print all data in the table with SELECT * FROM
 	 create string with query then execute
 	 **********************************************/
-	string query = "SELECT * FROM PROGRAMMER;";
+	string query = "SELECT * FROM COURSES;";
 
 	cout << endl << query << endl;		//print the string to screen
 
@@ -126,7 +126,7 @@ int main(int argc, char** argv)
 
 	// Adding from a file or a user input means some string additions (see below)
 	string UID = "8";
-	string userInput("INSERT INTO PROGRAMMER VALUES(" + fname + "','" + lname + "'," + CRN + "'," + title + "'," + department + "'," + time + "'," + dotw + "'," + semester + "'," + year + "'," + credit ");");
+	string userInput("INSERT INTO COURSES VALUES(" + fname + "','" + lname + "'," + CRN + "'," + title + "'," + department + "'," + time + "'," + dotw + "'," + semester + "'," + year + "'," + credit ");");
 
 	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
 
@@ -136,12 +136,12 @@ int main(int argc, char** argv)
 	 refining queries --> SELECT example
 	 create string --> call command
 	***********************************/
-	string surname = "SELECT SURNAME FROM PROGRAMMER WHERE BIRTHYEAR < 1950;";
+	string surname = "SELECT SURNAME FROM COURSES WHERE BIRTHYEAR < 1950;";
 	cout << endl << "SQL Command: " << surname << endl;
 
 	exit = sqlite3_exec(DB, surname.c_str(), callback, NULL, &messageError);
 	
-	query = "SELECT * FROM PROGRAMMER;";
+	query = "SELECT * FROM COURSES;";
 
 	cout << endl << query << endl;		//print the string to screen
 
