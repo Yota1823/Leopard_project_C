@@ -2,6 +2,7 @@
 #include "Instructor.h" 
 #include "Admin.h"
 #include "User.h"
+#include "cpp_sqlite_programmers.cpp"
 
 #include <iostream>
 #include <string>
