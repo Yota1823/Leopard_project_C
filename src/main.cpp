@@ -2,10 +2,11 @@
 #include "Instructor.h" 
 #include "Admin.h"
 #include "User.h"
-#include "cpp_sqlite_programmers.cpp"
 
 #include <iostream>
 #include <string>
+#include <stdio.h>
+#include <sqlite3.h>
 
 
 #define student 1
@@ -19,19 +20,136 @@ using std::string;
 using std::endl;
 
 
-int main() {
+/************************************************************************************************* 	
+ The callback() function is invoked for each result row coming out of the evaluated SQL statement
+ 1st argument - the 4th argument provided by sqlite3_exec() and is typically not used
+ 2nd argument - number of columns in the result
+ 3rd argument - an array of strings containing the fields in that row
+ 4th argument - an array of strings containing the names of the columns
+*************************************************************************************************/
+static int callback(void* data, int argc, char** argv, char** azColName) 
+{ 				
+	int i; 
+   
+    	for (i = 0; i < argc; i++) 
+		{ 
+        	printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL"); 
+    	} 
+  
+    	printf("\n"); 
+    	
+		return 0; 
+}
+
+int main(int argc, char** argv) {
+	sqlite3* DB; 
+
 	string first_name; 
 	string last_name;
+	int CRN;
 	int choice;
 	int ID; 
 	string student_user;
 	string instructor_user;
 	string admin_user;
-	int CRN;
 	int select;
 	string course_name;
+
+	string title;
+	string department;
+	int time;
+	int dotw;
+	string semester;
+	string year;
+	int credit;
+
+	/*******************************************************************	
+	 Creating a table
+	 Create a string then pass the string into the sqlite3_exec function
+	********************************************************************/
+    string table = "CREATE TABLE COURSES("
+                   "CRN INTEGER PRIMARY KEY, "
+                   "TITLE TEXT NOT NULL, "
+                   "DEPARTMENT TEXT NOT NULL, "
+                   "TIME INTEGER NOT NULL, "
+				   "DOTW TEXT NOT NULL," 
+				   "SEMSTER TEXT NOT NULL, " // DID TEXT TO HAVE SUMMER SPRING FAL
+				   "YEAR TEXT NOT NULL,"
+				   "CREDITS INTEGER NOT NULL);";
+    	
+	int exit = 0;
+		
+    exit = sqlite3_open("database/assignment3.db.db", &DB);			//open the database
+		
+	char* messageError; 
+	
+	// execute the create table command
+	// sqlite3_exec( pointer to database file, string for sql command, callback function (used to respond to queries, not used here), input to callback, error message address)
+    exit = sqlite3_exec(DB, table.c_str(), NULL, 0, &messageError); 
+  
+   	if (exit != SQLITE_OK) 
+	{ 
+        std::cerr << "Error Create Table" << std::endl; 
+       	sqlite3_free(messageError); 
+    } 
+    else
+        cout << "Table created Successfully" << std::endl; 
+
+	/*******************************************************************
+	 Inserting values into a table.
+	 Create a string then pass the string into the sqlite3_exec function
+	********************************************************************/
+	// hard-code (push) a few values into the database - NOTE you can create a single string with multiple INSERT commands
+    string sql("INSERT INTO COURSES VALUES(123, 'PROGRAMMING', 'ELECTRICAL', 1230, 'MONDAY', 'SUMMER', 'JUNIOR', 3 );"
+        "INSERT INTO COURSES VALUES(132, 'SIGNALS', 'ELECTRICAL', 200, 'TUESDAY', 'SPRING', 'SENIOR', 4 );"
+        "INSERT INTO COURSES VALUES(321, 'NETWORKS', 'ELECTRICAL', 100, 'WEDNESDAY', 'FALL', 'FRESHMAN', 4);"
+        "INSERT INTO COURSES VALUES(322, 'MULTIVARIABLE', 'MATH', 330, 'THURSDAY', ' FALL', 'SENIOR', 4);"
+        "INSERT INTO COURSES VALUES(113, 'ETHICS', 'HSS', 800, 'FRIDAY', 'SPRING', 'FRESHMAN', 3 );"
+        "INSERT INTO COURSES VALUES(121, 'ECOMONY', 'MATH' , 500, 'MONDAY', 'SUMMER', 'JUNIOR', 3);"
+        "INSTERT INTO COURSES VALUES(332, 'ENGLISH', 'ENGLISH', 330, 'TUESDAY', 'FALL', 'SOPHMORE', 3;)" // SEMI COLON IN PARENTH
+
+    );
+
+	// execute the command
+	exit = sqlite3_exec(DB, sql.c_str(), NULL, 0, &messageError);
+
+	if (exit != SQLITE_OK) 
+	{
+		std::cerr << "Error Insert" << std::endl;
+		sqlite3_free(messageError);
+	}
+	else
+		std::cout << "Records created Successfully!" << std::endl;
+
+	/***********************************************
+	 print all data in the table with SELECT * FROM
+	 create string with query then execute
+	 **********************************************/
+	string query = "SELECT * FROM STUDENT;";
+
+	cout << endl << query << endl;		//print the string to screen
+
+	// you need the callback function this time since there could be multiple rows in the table
+	sqlite3_exec(DB, query.c_str(), callback, NULL, NULL);
+
+ 	cout << "Adding two new students\n";
+	
+	for(int i = 0; i < 1; i++){
+	cout << endl << "Enter the first name, last name, ID separated by spaces: ";
+	cin >> fname >> lname >> CRN >> title >> department >> time >> dotw >> semester >> year >> credit;
+	cout << endl;
+
+	// Adding from a file or a user input means some string additions (see below)
+	string UID = "8";
+	string userInput("INSERT INTO COURSES VALUES(" + fname + "','" + lname + "'," + CRN + "'," + title + "'," + department + "'," + time + "'," + dotw + "'," + semester + "'," + year + "'," + credit ");");
+
+	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
+	}
+
+
+	
 while(1){
-	//initial restaurant status
+	//initial status
 	User user("first name","last name",0);
 			cout << "---------- What are you? ----------\n";
 			cout << "Enter the following options:\n";
