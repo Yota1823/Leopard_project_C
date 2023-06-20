@@ -44,11 +44,15 @@ static int callback(void* data, int argc, char** argv, char** azColName)
 int main(int argc, char** argv) {
 	sqlite3* DB; 
 
+	int ID; 
 	string first_name; 
 	string last_name;
+	string grad_year;
+	char major;
+	string email;
+
 	int CRN;
 	int choice;
-	int ID; 
 	string student_user;
 	string instructor_user;
 	string admin_user;
@@ -60,7 +64,6 @@ int main(int argc, char** argv) {
 	int time;
 	int dotw;
 	string semester;
-	string year;
 	int credit;
 
 	/*******************************************************************	
@@ -135,17 +138,30 @@ int main(int argc, char** argv) {
  	cout << "Adding two new students\n";
 	
 	for(int i = 0; i < 1; i++){
-	cout << endl << "Enter the ID, first name, last name, grad year,  separated by spaces: ";
-	cin >> fname >> lname >> CRN >> title >> department >> time >> dotw >> semester >> year >> credit;
+	cout << endl << "Enter the ID, first name, last name, grad year, major, email separated by spaces: ";
+	cin >> ID >> fname >> lname >> grad_year >> major >> email;
 	cout << endl;
 
 	// Adding from a file or a user input means some string additions (see below)
-	string UID = "8";
-	string userInput("INSERT INTO COURSES VALUES(" + fname + "','" + lname + "'," + CRN + "'," + title + "'," + department + "'," + time + "'," + dotw + "'," + semester + "'," + year + "'," + credit ");");
+	string UID = "6";
+	string userInput("INSERT INTO STUDENT VALUES(" + ID + "','" + fname + " ',' " + lname + " ',' " + grad_year + " ',' " + major + " ',' " + email + ");");
 
 	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
 	}
+
+ 	cout << "Remove one instructor\n";
 	
+	query = DELETE FROM INSTRUCTOR WHERE condition ID = 20001;
+	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
+	cout << "Succesfully, the instructor is removed\n";
+
+	cout << "Update an admin to Vice president\n";
+
+	query = query.exec("UPDATE ADMIN SET TITLE = "Vice-president" WHERE id = 30002");
+	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
+	cout << "Succesfully, the admin is updated to Vice president\n";
+
+
 	/***********************************
 	 refining queries --> SELECT example
 	 create string --> call command
@@ -162,12 +178,12 @@ int main(int argc, char** argv) {
 	// you need the callback function this time since there could be multiple rows in the table
 	sqlite3_exec(DB, query.c_str(), callback, NULL, NULL);
 
-	
+
 	// other possible commands from SQL (update, delete, etc.), try those. Same concept, create string then call command
 
 	sqlite3_close(DB); 
 
-	
+
 while(1){
 	//initial status
 	User user("first name","last name",0);
