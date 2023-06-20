@@ -35,7 +35,7 @@ int main(int argc, char** argv)
 	 Creating a table
 	 Create a string then pass the string into the sqlite3_exec function
 	********************************************************************/
-    string table = "CREATE TABLE PROGRAMMER("
+    string table = "CREATE TABLE COURSES("
                    "CRN INTEGER PRIMARY KEY, "
                    "TITLE TEXT NOT NULL, "
                    "DEPARTMENT TEXT NOT NULL, "
@@ -69,13 +69,13 @@ int main(int argc, char** argv)
 	 Create a string then pass the string into the sqlite3_exec function
 	********************************************************************/
 	// hard-code (push) a few values into the database - NOTE you can create a single string with multiple INSERT commands
-    string sql("INSERT INTO PROGRAMMER VALUES(123, 'PROGRAMMING', 'ELECTRICAL', 1230, 'MONDAY', 'SUMMER', 3 );"
-        "INSERT INTO PROGRAMMER VALUES(132, 'SIGNALS', 'ELECTRICAL', 200, 'TUESDAY', 'SPRING', 4 );"
-        "INSERT INTO PROGRAMMER VALUES(321, 'NETWORKS', 'ELECTRICAL', 100, 'WEDNESDAY', 'FALL', 4);"
-        "INSERT INTO PROGRAMMER VALUES(322, 'MULTIVARIABLE', 'MATH', 330, 'THURSDAY', ' FALL', 4);"
-        "INSERT INTO PROGRAMMER VALUES(113, 'ETHICS', 'HSS', 800, 'FRIDAY', 'SPRING', 3 );"
-        "INSERT INTO PROGRAMMER VALUES(121, 'ECOMONY', 'MATH' , 500, 'MONDAY', 'SUMMER', 3);"
-        "INSTERT INTO PROGRAMMER VALUES(332, 'ENGLISH', 'ENGLISH', 330, 'TUESDAY', 'FALL', 3;)" // SEMI COLON IN PARENTH
+    string sql("INSERT INTO COURSES VALUES(123, 'PROGRAMMING', 'ELECTRICAL', 1230, 'MONDAY', 'SUMMER', 3 );"
+        "INSERT INTO COURSES VALUES(132, 'SIGNALS', 'ELECTRICAL', 200, 'TUESDAY', 'SPRING', 4 );"
+        "INSERT INTO COURSES VALUES(321, 'NETWORKS', 'ELECTRICAL', 100, 'WEDNESDAY', 'FALL', 4);"
+        "INSERT INTO COURSES VALUES(322, 'MULTIVARIABLE', 'MATH', 330, 'THURSDAY', ' FALL', 4);"
+        "INSERT INTO COURSES VALUES(113, 'ETHICS', 'HSS', 800, 'FRIDAY', 'SPRING', 3 );"
+        "INSERT INTO COURSES VALUES(121, 'ECOMONY', 'MATH' , 500, 'MONDAY', 'SUMMER', 3);"
+        "INSTERT INTO COURSES VALUES(332, 'ENGLISH', 'ENGLISH', 330, 'TUESDAY', 'FALL', 3;)" // SEMI COLON IN PARENTH
 
     );
 
