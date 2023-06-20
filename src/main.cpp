@@ -135,7 +135,7 @@ int main(int argc, char** argv) {
  	cout << "Adding two new students\n";
 	
 	for(int i = 0; i < 1; i++){
-	cout << endl << "Enter the first name, last name, ID separated by spaces: ";
+	cout << endl << "Enter the ID, first name, last name, grad year,  separated by spaces: ";
 	cin >> fname >> lname >> CRN >> title >> department >> time >> dotw >> semester >> year >> credit;
 	cout << endl;
 
@@ -145,7 +145,27 @@ int main(int argc, char** argv) {
 
 	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
 	}
+	
+	/***********************************
+	 refining queries --> SELECT example
+	 create string --> call command
+	***********************************/
+	string surname = "SELECT SURNAME FROM COURSES WHERE BIRTHYEAR < 1950;";
+	cout << endl << "SQL Command: " << surname << endl;
 
+	exit = sqlite3_exec(DB, surname.c_str(), callback, NULL, &messageError);
+	
+	query = "SELECT * FROM COURSES;";
+
+	cout << endl << query << endl;		//print the string to screen
+
+	// you need the callback function this time since there could be multiple rows in the table
+	sqlite3_exec(DB, query.c_str(), callback, NULL, NULL);
+
+	
+	// other possible commands from SQL (update, delete, etc.), try those. Same concept, create string then call command
+
+	sqlite3_close(DB); 
 
 	
 while(1){
