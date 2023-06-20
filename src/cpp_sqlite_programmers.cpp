@@ -47,7 +47,7 @@ int main(int argc, char** argv)
     	
 	int exit = 0;
 		
-    exit = sqlite3_open("daabase.db", &DB);			//open the database
+    exit = sqlite3_open("database.db", &DB);			//open the database
 		
 	char* messageError; 
 	
