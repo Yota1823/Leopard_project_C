@@ -47,7 +47,7 @@ int main(int argc, char** argv)
     	
 	int exit = 0;
 		
-    exit = sqlite3_open("programmer.db", &DB);			//open the database
+    exit = sqlite3_open("daabase.db", &DB);			//open the database
 		
 	char* messageError; 
 	
@@ -111,7 +111,7 @@ int main(int argc, char** argv)
 	 get input --> create string --> call command
 	**********************************************/
 	string fname, lname; 
-	string year;			//year is an integer in the database table, but we beed to create a string to pass in to the sql command
+	string year;			//year is an integer in the database table, but we need to create a string to pass in to the sql command
 	int CRN;
 	string title;
 	string department;
@@ -121,7 +121,7 @@ int main(int argc, char** argv)
 	int year;
 	int credit;
 
-	cout << endl << "Enter the first name, last name, and birth year of a famous programmer separated by spaces: ";
+	cout << endl << "Enter the First and Last name, CRN#, Title, Department, Time, Day of the Week, and Semester seperated by spaces.";
 	cin >> fname >> lname >> year >> CRN >> title >> department >> time >> dotw >> semester >> credit;
 	cout << endl;
 
