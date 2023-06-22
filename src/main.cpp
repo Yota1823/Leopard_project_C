@@ -1,7 +1,7 @@
-#include "Student.h"
-#include "Instructor.h" 
-#include "Admin.h"
-#include "User.h"
+#include "../inc/Student.h"
+#include "../inc/Instructor.h" 
+#include "../inc/Admin.h"
+#include "../inc/User.h"
 
 #include <iostream>
 #include <string>
