@@ -36,12 +36,12 @@ int main(int argc, char** argv)
 	 Create a string then pass the string into the sqlite3_exec function
 	********************************************************************/
     string table = "CREATE TABLE COURSES("
-                   "CRN INTEGER PRIMARY KEY, "
+                   "CRN INTEGER PRIMARY KEY NOT NULL, "
                    "TITLE TEXT NOT NULL, "
                    "DEPARTMENT TEXT NOT NULL, "
                    "TIME INTEGER NOT NULL, "
 				   "DOTW TEXT NOT NULL," 
-				   "SEMSTER TEXT NOT NULL, " // DID TEXT TO HAVE SUMMER SPRING FAL
+				   "SEMESTER TEXT NOT NULL, " // DID TEXT TO HAVE SUMMER SPRING FAL
 				   "YEAR INTEGER NOT NULL,"
 				   "CREDITS INTEGER NOT NULL);";
     	
@@ -137,6 +137,35 @@ int main(int argc, char** argv)
 	 refining queries --> SELECT example
 	 create string --> call command
 	***********************************/
+	while (sqlite3_step(selectStatement) == SQLITE_ROW) {
+		// Get the department of the current course from the result
+		std::string courseDepartment = reinterpret_cast<const char*>(sqlite3_column_text(selectStatement, 2));
+
+		// Query instructors for the current course department
+		std::string instructorQuery = "SELECT * FROM INSTRUCTOR WHERE DEPARTMENT = '" + courseDepartment + "';";
+		sqlite3_stmt* instructorStatement;
+		exit = sqlite3_prepare_v2(DB, instructorQuery.c_str(), -1, &instructorStatement, 0);
+
+		// Print the department and the instructors who can teach courses in that department
+		std::cout << "Instructors who can teach courses in the " << courseDepartment << " department:" << std::endl;
+
+		// Iterate over the result of the instructor query
+		while (sqlite3_step(instructorStatement) == SQLITE_ROW) {
+			// Get the name of the instructor from the result
+			std::string instructorName = reinterpret_cast<const char*>(sqlite3_column_text(instructorStatement, 1));
+
+			// Print the name of the instructor
+			std::cout << "- " << instructorName << std::endl;
+		}
+
+		// Finalize the instructor statement to release resources
+		sqlite3_finalize(instructorStatement);
+	}
+
+	// Finalize the select statement to release resources
+	sqlite3_finalize(selectStatement);
+
+	/*
 	string surname = "SELECT SURNAME FROM PROGRAMMER WHERE BIRTHYEAR < 1950;";
 	cout << endl << "SQL Command: " << surname << endl;
 
@@ -145,7 +174,7 @@ int main(int argc, char** argv)
 	query = "SELECT * FROM PROGRAMMER;";
 
 	cout << endl << query << endl;		//print the string to screen
-
+	
 	// you need the callback function this time since there could be multiple rows in the table
 	sqlite3_exec(DB, query.c_str(), callback, NULL, NULL);
 
