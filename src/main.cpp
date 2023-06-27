@@ -3,10 +3,12 @@
 #include "../inc/Admin.h"
 #include "../inc/User.h"
 
+#include "sqlite3.h"
+
 #include <iostream>
 #include <string>
 #include <stdio.h>
-#include <sqlite3.h>
+
 
 
 #define student 1
