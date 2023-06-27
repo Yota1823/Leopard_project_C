@@ -86,7 +86,7 @@ int main(int argc, char** argv) {
 		
     exit = sqlite3_open("database/assignment3.db.db", &DB);			//open the database
 		
-	char* messageError; 
+	char* messageError;
 	
 	// execute the create table command
 	// sqlite3_exec( pointer to database file, string for sql command, callback function (used to respond to queries, not used here), input to callback, error message address)
