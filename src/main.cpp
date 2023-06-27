@@ -3,7 +3,7 @@
 #include "../inc/Admin.h"
 #include "../inc/User.h"
 
-#include "sqlite3.h"
+#include "../sqlite/sqlite3.h"
 
 #include <iostream>
 #include <string>
