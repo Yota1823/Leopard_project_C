@@ -43,7 +43,7 @@ static int callback(void* data, int argc, char** argv, char** azColName)
 		return 0; 
 }
 
-int main(int argc, char** argv) {
+int main() {
 	sqlite3* DB; 
 
 	int ID; 
@@ -84,7 +84,7 @@ int main(int argc, char** argv) {
     	
 	int exit = 0;
 		
-    exit = sqlite3_open("database/assignment3.db.db", &DB);			//open the database
+    exit = sqlite3_open("../database/assignment3.db.db", &DB);			//open the database
 		
 	char* messageError;
 	
@@ -141,12 +141,12 @@ int main(int argc, char** argv) {
 	
 	for(int i = 0; i < 1; i++){
 	cout << endl << "Enter the ID, first name, last name, grad year, major, email separated by spaces: ";
-	cin >> ID >> fname >> lname >> grad_year >> major >> email;
+	cin >> ID >> first_name >> last_name >> grad_year >> major >> email;
 	cout << endl;
 
 	// Adding from a file or a user input means some string additions (see below)
 	string UID = "6";
-	string userInput("INSERT INTO STUDENT VALUES(" + ID + "','" + fname + " ',' " + lname + " ',' " + grad_year + " ',' " + major + " ',' " + email + ");");
+	string userInput("INSERT INTO STUDENT VALUES(" + ID + " ',' " + fname + " ',' " + lname + " ',' " + grad_year + " ',' " + major + " ',' " + email + ");");
 
 	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
 	}
