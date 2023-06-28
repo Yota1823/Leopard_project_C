@@ -156,8 +156,8 @@ int main(int argc, char** argv) {
 	}
 
 	/**********************************************
-	 removing from a file or user input
-	 get input --> create string --> call command
+	 removing from a file
+	 updating title
 	**********************************************/
 
  	cout << "Remove one instructor\n";
