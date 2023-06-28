@@ -14,7 +14,7 @@
 #define student 1
 #define instructor 2
 #define admin 3
-#define exit 0
+#define exitsystem 0
 
 using std::cin;
 using std::cout;
@@ -43,7 +43,7 @@ static int callback(void* data, int argc, char** argv, char** azColName)
 		return 0; 
 }
 
-int main() {
+int main(int argc, char** argv) {
 	sqlite3* DB; 
 
 	int ID; 
@@ -84,8 +84,8 @@ int main() {
     	
 	int exit = 0;
 		
-    exit = sqlite3_open("../database/assignment3.db.db", &DB);			//open the database
-		
+    exit = sqlite3_open("database/assignment3.db", &DB);			//open the database
+	
 	char* messageError;
 	
 	// execute the create table command
@@ -137,6 +137,10 @@ int main() {
 	// you need the callback function this time since there could be multiple rows in the table
 	sqlite3_exec(DB, query.c_str(), callback, NULL, NULL);
 
+	/**********************************************
+	 adding from a file or user input
+	 get input --> create string --> call command
+	**********************************************/
  	cout << "Adding two new students\n";
 	
 	for(int i = 0; i < 1; i++){
@@ -145,22 +149,27 @@ int main() {
 	cout << endl;
 
 	// Adding from a file or a user input means some string additions (see below)
-	string UID = "6";
-	string userInput("INSERT INTO STUDENT VALUES(" + ID + " ',' " + fname + " ',' " + lname + " ',' " + grad_year + " ',' " + major + " ',' " + email + ");");
+	string UID = "7";
+	string userInput("INSERT INTO STUDENT VALUES(" + UID + ",'" + first_name + "','" + last_name + "','" + grad_year + "','" + major + "'," + email + ");");
 
 	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
 	}
 
+	/**********************************************
+	 removing from a file or user input
+	 get input --> create string --> call command
+	**********************************************/
+
  	cout << "Remove one instructor\n";
 	
-	query = DELETE FROM INSTRUCTOR WHERE condition ID = 20001;
-	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
+	string delete_query = "DELETE FROM INSTRUCTOR WHERE ID = 20001;";
+	exit = sqlite3_exec(DB, delete_query.c_str(), callback, NULL, NULL);
 	cout << "Succesfully, the instructor is removed\n";
 
 	cout << "Update an admin to Vice president\n";
 
-	query = query.exec("UPDATE ADMIN SET TITLE = "Vice-president" WHERE id = 30002");
-	exit = sqlite3_exec(DB, userInput.c_str(), callback, NULL, NULL);
+	string update_query = "UPDATE ADMIN SET TITLE = 'Vice-president' WHERE id = 30002";
+	exit = sqlite3_exec(DB, update_query.c_str(), callback, NULL, NULL);
 	cout << "Succesfully, the admin is updated to Vice president\n";
 
 
