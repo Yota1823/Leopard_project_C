@@ -1,0 +1,3 @@
+C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3225 Applied Programming Concepts/Leopard_project_C/CMakeFiles/LeopardBuild.dir
+C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3225 Applied Programming Concepts/Leopard_project_C/CMakeFiles/ALL_BUILD.dir
+C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3225 Applied Programming Concepts/Leopard_project_C/CMakeFiles/ZERO_CHECK.dir

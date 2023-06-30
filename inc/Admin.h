@@ -21,8 +21,8 @@ public:
 	Admin(string in_first_name, string in_last_name, int in_ID);
 
 	//method
-    string search_course();
-    void add_course_in_system();
+    string search_course(string in_course_name);
+    void add_course_in_system(string in_course_name);
     void remove_course_in_system();
     void add_user();
     void remove_user();

@@ -1,0 +1,10 @@
+^C:\USERS\IDER\ONEDRIVE - WENTWORTH INSTITUTE OF TECHNOLOGY\ELEC 3225 APPLIED PROGRAMMING CONCEPTS\LEOPARD_PROJECT_C\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3225 Applied Programming Concepts/Leopard_project_C" "-BC:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3225 Applied Programming Concepts/Leopard_project_C" --check-stamp-file "C:/Users/ider/OneDrive - Wentworth Institute of Technology/ELEC 3225 Applied Programming Concepts/Leopard_project_C/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

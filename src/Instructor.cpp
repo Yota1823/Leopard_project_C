@@ -6,10 +6,6 @@
 using std::string;
 using std::cout;
 
-string name;
-string first_name;
-string last_name;
-int ID;
 
 	//constructor (initial value)
 	Instructor::Instructor(){
@@ -28,13 +24,13 @@ int ID;
 
 	//method
     string Instructor::search_course(string in_course_name){
-        return 0;
+        return "";
     }
     string Instructor::print_schedule(){
-        
+        return "";
     }
     string Instructor::print_class_list(){
-
+        return "";
     }
 
 	//destreuctor (delete)

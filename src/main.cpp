@@ -174,20 +174,23 @@ int main(int argc, char** argv) {
 
 
 	/***********************************
-	 refining queries --> SELECT example
-	 create string --> call command
+	 matching queries --> INNER JOIN
+	 combine table --> call query and display matched course and instructor
 	***********************************/
-	string surname = "SELECT SURNAME FROM COURSES WHERE BIRTHYEAR < 1950;";
-	cout << endl << "SQL Command: " << surname << endl;
+    cout << "Enter instructor username: ";
+    cin >> instructor_user;
 
-	exit = sqlite3_exec(DB, surname.c_str(), callback, NULL, &messageError);
-	
-	query = "SELECT * FROM COURSES;";
+    // Query database to get course details for the department
+    cout << "Enter department: ";
+    cin >> department;
+	string sql_display = "SELECT DEPERTMENT, TITLE, NAME, SURNAME FROM INSTRUCTOR INNER JOIN COURSE ON INSTRUCTOR.DEPERTMENT = COURSE.DEPERTMENT";
 
-	cout << endl << query << endl;		//print the string to screen
+	string query_display = "SELECT concat('Professor ', (name), ' has ', TITLE, ' class in this ', DEPERTMENT) as InstructorCOurse FROM COURSE";
+
+	cout << endl << query_display << endl;		//print the string to screen
 
 	// you need the callback function this time since there could be multiple rows in the table
-	sqlite3_exec(DB, query.c_str(), callback, NULL, NULL);
+	sqlite3_exec(DB, query_display.c_str(), callback, NULL, NULL);
 
 
 	// other possible commands from SQL (update, delete, etc.), try those. Same concept, create string then call command
@@ -269,7 +272,7 @@ while(1){
 					cout << "Enter the course number mame\n";
 					cin >> course_name;
 
-					instructor_user->search_course();
+					instructor_user->search_course(course_name);
 				}else if(select = 2){
 					cout << "Enter the course CRN\n";
 					cin >> CRN;
@@ -311,9 +314,9 @@ while(1){
 					cout << "Enter the course number mame\n";
 					cin >> course_name;
 
-					admin_user->search_course();
+					admin_user->search_course(course_name);
 				}else if(select = 2){
-					admin_user->add_course_in_system();
+					admin_user->add_course_in_system(course_name);
 					cout << "The class is added\n";
 				}else if(select = 3){
 					admin_user->remove_course_in_system();	

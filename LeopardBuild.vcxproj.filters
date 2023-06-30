@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\src\Admin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\src\Instructor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\src\Student.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\src\User.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\sqlite\sqlite3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\inc\Admin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\inc\Instructor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\inc\Student.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\inc\User.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ider\OneDrive - Wentworth Institute of Technology\ELEC 3225 Applied Programming Concepts\Leopard_project_C\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2D156844-7DAF-3C1A-B55D-354DF0FBA36B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DA0409AF-27E0-314B-87AA-F081E6750204}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

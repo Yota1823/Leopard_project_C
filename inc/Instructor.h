@@ -20,7 +20,7 @@ public:
 	Instructor(string in_first_name, string in_last_name, int in_ID);
 
 	//method
-    string search_course();
+    string search_course(string in_course_name);
     string print_schedule();
     string print_class_list();
 
